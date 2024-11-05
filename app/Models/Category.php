@@ -18,4 +18,10 @@ class Category extends Model
     {
         return $this->hasMany(Campaign::class);
     }
+
+    public function getImageAttribute($image)
+    {
+        return asset('storage/categories/'.$image);
+    }
+
 }

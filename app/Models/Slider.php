@@ -13,4 +13,10 @@ class Slider extends Model
         'image',
         'link',
     ];
+
+    public function getImageAttribute($image)
+    {
+        return asset('storage/sliders'.$image);
+    }
+
 }
