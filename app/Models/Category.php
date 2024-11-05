@@ -13,4 +13,9 @@ class Category extends Model
         'slug',
         'image',
     ];
+
+    public function campaigns()
+    {
+        return $this->hasMany(Campaign::class);
+    }
 }

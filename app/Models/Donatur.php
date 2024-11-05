@@ -21,4 +21,9 @@ class Donatur extends Model
         'remember_token',
     ];
 
+    public function donations()
+    {
+        return $this->hasMany(Donation::class);
+    }
+
 }

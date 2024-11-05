@@ -18,4 +18,14 @@ class Donation extends Model
         'status',
         'snap_token',
     ];
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
+    }
+
+    public function donatur()
+    {
+        return $this->belongsTo(Donatur::class);
+    }
 }
